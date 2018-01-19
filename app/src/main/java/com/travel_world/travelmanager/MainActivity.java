@@ -1,0 +1,82 @@
+package com.travel_world.travelmanager;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
+import com.travel_world.travelmanager.TravelDataFileDAO;
+import com.travel_world.travelmanager.TravelDataMemoryDAO;
+
+public class MainActivity extends AppCompatActivity {
+
+    public static TravelDataDAO dao;
+    //    int dbType;
+    DBtype dbType;
+    ListView lv;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+//        dao = new StudentFileDAO(this);   //for old method
+        dbType =DBtype.FILE;
+//        dbType = 1; // 1:記憶體 2:檔案
+        dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
+
+
+    }
+
+
+
+    @Override
+
+    protected void onResume() {
+        super.onResume();
+        lv = (ListView) findViewById(R.id.ListView);
+        ArrayList<String>  TravelDataNames = new ArrayList<>();
+        for (TravelData s : dao.getList())
+        {
+          //  String.valueOf(s.id)
+     //       TravelDataNames.add(s.startTime);        //check or startLocation  thomas 20180119      //CHECK
+            TravelDataNames.add( String.valueOf(s.id));        //check or startLocation  thomas 20180119      //CHECK
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, TravelDataNames);
+        lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent it =new Intent(MainActivity.this, DetailActivity.class);
+                it.putExtra("id", dao.getList().get(position).id);
+                startActivity(it);
+          }
+        });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_add)
+        {
+            Intent it = new Intent(MainActivity.this, AddActivity.class);
+            startActivity(it);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+}
