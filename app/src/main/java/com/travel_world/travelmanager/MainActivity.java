@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         for (TravelData s : dao.getList())
         {
           //  String.valueOf(s.id)
-     //       TravelDataNames.add(s.startTime);        //check or startLocation  thomas 20180119      //CHECK
-            TravelDataNames.add( String.valueOf(s.id));        //check or startLocation  thomas 20180119      //CHECK
+           TravelDataNames.add(s.startTime);        //check or startLocation  thomas 20180119      //CHECK
+     //       TravelDataNames.add( String.valueOf(s.id));        //check or startLocation  thomas 20180119      //CHECK
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, TravelDataNames);

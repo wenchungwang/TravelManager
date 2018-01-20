@@ -5,19 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class EditActivity extends AppCompatActivity {
     int id;
     TravelData s;
-//    TextView tv4;
-    EditText ed1, ed2, ed3, ed4, ed5, ed6, ed7;
+    TextView tv4;
+    EditText ed2, ed3, ed4, ed5, ed6, ed7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        ed1 = findViewById(R.id.editText16);
+        id = getIntent().getIntExtra("id", 0);
+        s = MainActivity.dao.getTravelData(id);
+
+        tv4 = findViewById(R.id.textView111);
         ed2 = findViewById(R.id.editText17);
         ed3 = findViewById(R.id.editText18);
         ed4 = findViewById(R.id.editText19);
@@ -26,7 +30,7 @@ public class EditActivity extends AppCompatActivity {
         ed7 = findViewById(R.id.editText112);
 
         //       tv4.setText(String.valueOf(s.id));
-        ed1.setText(s.id);
+        tv4.setText(String.valueOf(s.id));
         ed2.setText(s.startTime);
         ed3.setText(s.startLocation);
         ed4.setText(s.destinationTime);
