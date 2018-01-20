@@ -13,7 +13,7 @@ import com.travel_world.travelmanager.TravelData;       //check thomas wang 2018
 public class DetailActivity extends AppCompatActivity {
 
     TravelData s;
-    TextView tv1, tv2, tv3,tv4, tv5, tv6,tv7;
+    TextView tv1, tv2, tv3,tv4, tv5, tv6,tv7,tv11;
     int id;
   boolean Fastback=false;
     @Override
@@ -29,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         tv5 = (TextView) findViewById(R.id.textView15);
         tv6 = (TextView) findViewById(R.id.textView16);
         tv7 = (TextView) findViewById(R.id.textView17);
-
+        tv11 = (TextView) findViewById(R.id.textViewname0);
 
 
 //        tv1.setText(String.valueOf(s.id));
@@ -49,6 +49,7 @@ public class DetailActivity extends AppCompatActivity {
         tv5.setText(s.destinationLocation);
         tv6.setText(s.Weblocation);
         tv7.setText(s.note);
+        tv11.setText(s.name);
 
       if(Fastback)
         {

@@ -23,6 +23,7 @@ public class AddActivity extends AppCompatActivity {
         EditText ed10 = (EditText) findViewById(R.id.editText110);
         EditText ed11 = (EditText) findViewById(R.id.editText111);
         EditText ed12 = (EditText) findViewById(R.id.editText112);
+        EditText ed13 = (EditText) findViewById(R.id.editTextname);
 
         int id = Integer.valueOf(ed6.getText().toString());     //CHECK this .because it need to add real id again //thomas 20180119
         String startTime= ed7.getText().toString();
@@ -31,10 +32,9 @@ public class AddActivity extends AppCompatActivity {
         String destinationLocation= ed10.getText().toString();
         String Weblocation= ed11.getText().toString();
         String note= ed12.getText().toString();
+        String name= ed13.getText().toString();
 
-
-        MainActivity.dao.add(new TravelData(id, startLocation, destinationLocation,startTime
-        ,destinationTime,Weblocation,note));
+        MainActivity.dao.add(new TravelData(id,startTime,name,startLocation,destinationTime, destinationLocation,Weblocation,note));
 
 /*
         EditText ed1 = (EditText) findViewById(R.id.editText);

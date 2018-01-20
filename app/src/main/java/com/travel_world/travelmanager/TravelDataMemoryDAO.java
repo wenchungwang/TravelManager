@@ -70,6 +70,7 @@ public class TravelDataMemoryDAO implements TravelDataDAO{
                 if (t.id == s.id)
                 {
                     t.id = s.id;
+                    t.name=s.name;
                     t.startLocation = s.startLocation;
                     t.destinationLocation = s.destinationLocation;
                     t.startTime = s.startTime;
