@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
-
 public class EditActivity extends AppCompatActivity {
     int id;
     TravelData s;

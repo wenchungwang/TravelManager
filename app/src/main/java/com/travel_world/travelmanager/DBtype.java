@@ -5,5 +5,5 @@ package com.travel_world.travelmanager;
  */
 
 public enum DBtype {
-    MEMORY,FILE,FIREBASECLOUD
+    MEMORY,FILE
 }

@@ -15,8 +15,6 @@ public class TravelDataFactoryDAO {
                     return new TravelDataMemoryDAO();
                 case FILE:
                     return new TravelDataFileDAO(context);
-                case FIREBASECLOUD:
-                    return new TravelDataFireBaseCloudDAO(context);
             }
             return null;
         }

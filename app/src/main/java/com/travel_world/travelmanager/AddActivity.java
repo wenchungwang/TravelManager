@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
-
 public class AddActivity extends AppCompatActivity {
 
     @Override
