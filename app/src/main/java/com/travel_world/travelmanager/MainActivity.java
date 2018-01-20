@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
 import com.travel_world.travelmanager.TravelDataFileDAO;
 import com.travel_world.travelmanager.TravelDataMemoryDAO;
+import com.travel_world.travelmanager.TravelDataFireBaseCloudDAO;
 
 public class MainActivity extends AppCompatActivity {
 
