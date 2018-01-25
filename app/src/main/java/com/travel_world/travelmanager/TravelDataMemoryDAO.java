@@ -1,7 +1,9 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              package com.travel_world.travelmanager;
+package com.travel_world.travelmanager;
 
 import java.util.ArrayList;
-import java.util.regex.Pattern;  //?? check thomas wang 20180117
+
+import java.util.ArrayList;
+//import java.util.regex.Pattern;  //?? check thomas wang 20180117
 /**
  * Created by Thomas_wang on 2018/1/19.
  */

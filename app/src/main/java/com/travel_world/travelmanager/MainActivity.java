@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
 import com.travel_world.travelmanager.TravelDataFileDAO;
 import com.travel_world.travelmanager.TravelDataMemoryDAO;
+import com.travel_world.travelmanager.TravelDataCloudDAO;
+import com.travel_world.travelmanager.TravelDataDAODBImpl;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        dao = new StudentFileDAO(this);   //for old method
-        dbType =DBtype.DB;
+        dbType =DBtype.CLOUD;
 //        dbType = 1; // 1:記憶體 2:檔案
         dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
 
