@@ -15,6 +15,10 @@ public class TravelDataFactoryDAO {
                     return new TravelDataMemoryDAO();
                 case FILE:
                     return new TravelDataFileDAO(context);
+                case DB:
+                    return new TravelDataDAODBImpl(context);
+                case CLOUD:
+                    return new TravelDataCloudDAO(context);
             }
             return null;
         }

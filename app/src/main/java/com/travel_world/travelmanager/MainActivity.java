@@ -22,16 +22,30 @@ public class MainActivity extends AppCompatActivity {
     //    int dbType;
     DBtype dbType;
     ListView lv;
+    ArrayList<String> TravelDataNames; //
+    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        dao = new StudentFileDAO(this);   //for old method
-        dbType =DBtype.FILE;
+        dbType =DBtype.DB;
 //        dbType = 1; // 1:記憶體 2:檔案
         dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
 
-
+        TravelDataNames = new ArrayList<>();
+        adapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, TravelDataNames);
+        lv = (ListView) findViewById(R.id.ListView);
+        lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent it = new Intent(MainActivity.this, DetailActivity.class);
+                it.putExtra("id", dao.getList().get(position).id);
+                startActivity(it);
+            }
+        });
     }
 
 
@@ -40,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
+/*
         lv = (ListView) findViewById(R.id.ListView);
         ArrayList<String>  TravelDataNames = new ArrayList<>();
         for (TravelData s : dao.getList())
@@ -60,9 +75,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
           }
         });
+*/
+        refreshData();
 
     }
 
+    public void refreshData()
+    {
+        TravelDataNames.clear();
+        for (TravelData s : dao.getList())
+        {
+//            TravelDataNames.add(s.startTime);   //thomas 20180123
+//            TravelData.add(s.name);
+            TravelDataNames.add(s.startTime);
+        }
+        adapter.notifyDataSetChanged();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
