@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayList<String> TravelDataNames; //
     ArrayAdapter<String> adapter;
+    String str[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         dbType =DBtype.CLOUD;
 //        dbType = 1; // 1:記憶體 2:檔案
         dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
-
+        str = new String[] {"1", "2", "3","4","5","6"};
         TravelDataNames = new ArrayList<>();
         adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, TravelDataNames);
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Toast.makeText(MainActivity.this, str[position], Toast.LENGTH_SHORT).show();     //for test 20180129
                 Intent it = new Intent(MainActivity.this, DetailActivity.class);
                 it.putExtra("id", dao.getList().get(position).id);
                 startActivity(it);
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         {
 //            TravelDataNames.add(s.startTime);   //thomas 20180123
 //            TravelData.add(s.name);
+ //          TravelDataNames.add(s.startTime);
             TravelDataNames.add(s.startTime);
         }
         adapter.notifyDataSetChanged();
