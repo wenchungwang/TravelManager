@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         dbType =DBtype.DB;
 //        dbType = 1; // 1:記憶體 2:檔案
         dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
-        str = new String[] {"1", "2", "3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"};
+        str = new String[] {"1", "2", "3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"};
         TravelDataNames = new ArrayList<>();
         adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, TravelDataNames);
