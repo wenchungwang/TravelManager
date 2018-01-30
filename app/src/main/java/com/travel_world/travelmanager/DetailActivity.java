@@ -22,7 +22,10 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         id = getIntent().getIntExtra("id", 0);
 //        s = MainActivity.dao.getStudent(id);
-        tv1 = (TextView) findViewById(R.id.textView11);
+
+
+//        tv1 = (TextView) findViewById(R.id.textView11);
+
         tv2 = (TextView) findViewById(R.id.textView12);
         tv3 = (TextView) findViewById(R.id.textView13);
         tv4 = (TextView) findViewById(R.id.textView14);
@@ -35,6 +38,19 @@ public class DetailActivity extends AppCompatActivity {
 //        tv1.setText(String.valueOf(s.id));
 //        tv2.setText(s.name);
 //        tv3.setText(String.valueOf(s.score));
+
+        tv1 = findViewById(R.id.textVieweditid0);
+/*
+        tv2 = findViewById(R.id.textTextstartTime);
+        tv3 = findViewById(R.id.textTextstartLocation);
+        tv4 = findViewById(R.id.textTextdestinationTime);
+        tv5 = findViewById(R.id.textTextdestinationLocation);
+        tv6 = findViewById(R.id.textTextWeblocation);
+        tv7 = findViewById(R.id.textTextnote);
+        tv11 = findViewById(R.id.textTextnamename);
+*/
+
+
 
     }
 
