@@ -22,7 +22,7 @@ public class EditActivity extends AppCompatActivity {
 
         id = getIntent().getIntExtra("id", 0);
         s = MainActivity.dao.getTravelData(id);
-//        item =  MainActivity.dao.getList();
+      //item =  MainActivity.dao.getList();
 /*
         tv4 = findViewById(R.id.textView111);
         ed2 = findViewById(R.id.editText17);
@@ -48,13 +48,20 @@ public class EditActivity extends AppCompatActivity {
         //       tv4.setText(String.valueOf(s.id));
         tv4.setText(String.valueOf(s.id));
  //       tv4.setText(item);
-        ed2.setText(s.startTime);
+
+
+//        ed2.setText(s.startTime);
+        ed2.setText(s.name);
         ed3.setText(s.startLocation);
         ed4.setText(s.destinationTime);
         ed5.setText(s.destinationLocation);
         ed6.setText(s.Weblocation);
         ed7.setText(s.note);
-        edname.setText(s.name);
+        edname.setText(s.startTime);
+//        edname.setText(s.name);
+
+
+
     }
 
 
