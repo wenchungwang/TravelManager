@@ -48,7 +48,7 @@
 
     <EditText
         android:id="@+id/editTextWeblocation"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="8dp"
@@ -86,7 +86,7 @@
 
     <EditText
         android:id="@+id/editTextnote"
-        android:layout_width="272dp"
+        android:layout_width="320dp"
         android:layout_height="100dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="8dp"
@@ -183,9 +183,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="官網:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toStartOf="@+id/editTextWeblocation"
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
@@ -197,9 +197,9 @@
         android:layout_height="41dp"
         android:layout_marginBottom="76dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="PS:"
+        android:text="備註"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextnote"
         app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +212,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
