@@ -23,6 +23,7 @@ public class EditActivity extends AppCompatActivity {
         id = getIntent().getIntExtra("id", 0);
         s = MainActivity.dao.getTravelData(id);
 //        item =  MainActivity.dao.getList();
+/*
         tv4 = findViewById(R.id.textView111);
         ed2 = findViewById(R.id.editText17);
         ed3 = findViewById(R.id.editText18);
@@ -31,6 +32,19 @@ public class EditActivity extends AppCompatActivity {
         ed6 = findViewById(R.id.editText111);
         ed7 = findViewById(R.id.editText112);
         edname = findViewById(R.id.editTextname);
+*/
+/*
+
+*/
+        tv4 = findViewById(R.id.textVieweditid);
+        ed2 = findViewById(R.id.editTextstartTime);
+        ed3 = findViewById(R.id.editTextstartLocation);
+        ed4 = findViewById(R.id.editTextdestinationTime);
+        ed5 = findViewById(R.id.editTextdestinationLocation);
+        ed6 = findViewById(R.id.editTextWeblocation);
+        ed7 = findViewById(R.id.editTextnote);
+        edname = findViewById(R.id.editTextnamename);
+
         //       tv4.setText(String.valueOf(s.id));
         tv4.setText(String.valueOf(s.id));
  //       tv4.setText(item);
