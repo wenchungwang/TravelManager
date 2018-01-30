@@ -27,8 +27,8 @@ public class DetailActivity extends AppCompatActivity {
 //        tv1 = (TextView) findViewById(R.id.textView11);
 
         tv2 = (TextView) findViewById(R.id.textView12);
-        tv3 = (TextView) findViewById(R.id.textView13);
-        tv4 = (TextView) findViewById(R.id.textView14);
+        tv3 = (TextView) findViewById(R.id.textView14);
+        tv4 = (TextView) findViewById(R.id.textView13);
         tv5 = (TextView) findViewById(R.id.textView15);
         tv6 = (TextView) findViewById(R.id.textView16);
         tv7 = (TextView) findViewById(R.id.textView17);

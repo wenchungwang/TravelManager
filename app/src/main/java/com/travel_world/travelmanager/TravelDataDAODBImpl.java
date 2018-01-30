@@ -36,7 +36,6 @@ public class TravelDataDAODBImpl implements TravelDataDAO{
             cv.put("Weblocation", s.Weblocation);
             cv.put("note", s.note);
 
-//            cv.put("score", s.score);
             db.insert("traveldata", null, cv);
             return true;
         }
