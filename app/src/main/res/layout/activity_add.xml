@@ -17,6 +17,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +61,7 @@
 
     <EditText
         android:id="@+id/editText111"
-        android:layout_width="306dp"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
@@ -75,14 +76,11 @@
         android:layout_width="320dp"
         android:layout_height="79dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="items"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText111" />
 
     <Button
@@ -234,7 +232,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="PS:"
+        android:text="備註"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editText112"
         app:layout_constraintStart_toStartOf="parent"
