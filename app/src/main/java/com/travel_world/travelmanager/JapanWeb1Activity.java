@@ -3,21 +3,22 @@ package com.travel_world.travelmanager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Toast;
 
 public class JapanWeb1Activity extends AppCompatActivity {
     WebView wv;
-    String str2[];
+//    String str2[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_japan_web1);
 
         wv = (WebView) findViewById(R.id.WebView);
- //       wv.setWebChromeClient(new WebChromeClient());
-  //      wv.getSettings().setJavaScriptEnabled(true);
+      wv.setWebChromeClient(new WebChromeClient());
+       wv.getSettings().setJavaScriptEnabled(true);
 /*
         if(requestCode==456)
         {
@@ -50,7 +51,7 @@ public class JapanWeb1Activity extends AppCompatActivity {
 
     }
 
-
+/*
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
@@ -91,6 +92,48 @@ public class JapanWeb1Activity extends AppCompatActivity {
                 }
             }
         };
+*/
 
+
+
+    public void clickagoda(View v){
+        wv.loadUrl("https://www.agoda.com/");
+    }
+
+    public void clickhotels(View v){
+        wv.loadUrl("https://www.hotels.com/");
+    }
+
+    public void clickbooking(View v){
+        wv.loadUrl("https://www.booking.com/");
+    }
+
+    public void clickJalan(View v){
+        wv.loadUrl("https://www.jalan.net/tn/japan_hotels_ryokan/");
+    }
+
+    public void clicktripadvisor(View v){
+        wv.loadUrl("https://www.tripadvisor.com.tw/");
+    }
+
+    public void clickbackbag(View v){
+        wv.loadUrl("https://www.backpackers.com.tw/forum/");
+    }
+
+    public void clickjapanican(View v){
+        wv.loadUrl("https://www.japanican.com/tw/");
+    }
+
+    public void clickcombined(View v){
+        wv.loadUrl("https://www.hotelscombined.com.tw/");
+    }
+
+    public void clickikyu(View v){
+
+        wv.loadUrl("https://www.ikyu.com/sd/lkIndex.aspx");
+    }
 
 }
+
+
+
