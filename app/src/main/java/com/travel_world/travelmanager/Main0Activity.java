@@ -21,19 +21,30 @@ public class Main0Activity extends AppCompatActivity {
     }
 
     public void click22(View v){
-//        Intent it = new Intent(Main0Activity.this, MainActivity.class);
-//        startActivity(it);
+       Intent it = new Intent(Main0Activity.this, JtrafficActivity.class);
+      startActivity(it);
+ //      startActivityForResult(it,123);
     }
 
     public void click33(View v){
  //      Intent it = new Intent(Main0Activity.this, JapanWeb1Activity.class);
 
-        Intent it = new Intent(Main0Activity.this, JapanInformationActivity.class);
-        startActivity(it);
+        Intent it = new Intent(Main0Activity.this, JinActivity.class);
+     startActivity(it);
+ //       startActivityForResult(it,123);
     }
 
+    public void clickfood(View v){
 
+    }
 
+    public void clickmoney(View v){
+
+    }
+
+    public void clickhelp(View v){
+
+    }
 /*
     public void click11(View v) {
 

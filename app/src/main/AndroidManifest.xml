@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".JapanWeb1Activity" />
-        <activity android:name=".JapanInformationActivity"></activity>
+        <activity android:name=".JtrafficActivity" />
+        <activity android:name=".JinActivity"></activity>
     </application>
 
 </manifest>
