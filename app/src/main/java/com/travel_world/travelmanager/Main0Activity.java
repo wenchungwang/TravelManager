@@ -35,11 +35,13 @@ public class Main0Activity extends AppCompatActivity {
     }
 
     public void clickfood(View v){
-
+        Intent it = new Intent(Main0Activity.this,FoodActivity.class);
+        startActivity(it);
     }
 
     public void clickmoney(View v){
-
+        Intent it = new Intent(Main0Activity.this,MoneyActivity.class);
+        startActivity(it);
     }
 
     public void clickhelp(View v){
