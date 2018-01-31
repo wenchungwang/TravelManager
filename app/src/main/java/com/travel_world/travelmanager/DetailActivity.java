@@ -27,8 +27,8 @@ public class DetailActivity extends AppCompatActivity {
 //        tv1 = (TextView) findViewById(R.id.textView11);
 
         tv2 = (TextView) findViewById(R.id.textView12);
-        tv3 = (TextView) findViewById(R.id.textView14);
-        tv4 = (TextView) findViewById(R.id.textView13);
+        tv3 = (TextView) findViewById(R.id.textView13);
+        tv4 = (TextView) findViewById(R.id.textView14);
         tv5 = (TextView) findViewById(R.id.textView15);
         tv6 = (TextView) findViewById(R.id.textView16);
         tv7 = (TextView) findViewById(R.id.textView17);
@@ -60,12 +60,13 @@ public class DetailActivity extends AppCompatActivity {
         s = MainActivity.dao.getTravelData(id);
         tv1.setText(String.valueOf(s.id));
         tv2.setText(s.startTime);
+        tv11.setText(s.name);
         tv3.setText(s.startLocation);
         tv4.setText(s.destinationTime);
         tv5.setText(s.destinationLocation);
         tv6.setText(s.Weblocation);
         tv7.setText(s.note);
-        tv11.setText(s.name);
+
 
       if(Fastback)
         {

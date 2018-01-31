@@ -37,6 +37,17 @@ public class EditActivity extends AppCompatActivity {
 
 */
         tv4 = findViewById(R.id.textVieweditid);
+        edname = findViewById(R.id.editTextnamename);
+
+        ed2 = findViewById(R.id.editTextdestinationTime);
+        ed3 = findViewById(R.id.editTextdestinationLocation);
+        ed4 = findViewById(R.id.editTextstartTime);
+        ed5 = findViewById(R.id.editTextstartLocation);
+        ed6 = findViewById(R.id.editTextWeblocation);
+        ed7 = findViewById(R.id.editTextnote);
+
+/*
+        tv4 = findViewById(R.id.textVieweditid);
         ed2 = findViewById(R.id.editTextstartTime);
         ed3 = findViewById(R.id.editTextstartLocation);
         ed4 = findViewById(R.id.editTextdestinationTime);
@@ -44,6 +55,7 @@ public class EditActivity extends AppCompatActivity {
         ed6 = findViewById(R.id.editTextWeblocation);
         ed7 = findViewById(R.id.editTextnote);
         edname = findViewById(R.id.editTextnamename);
+*/
 
         //       tv4.setText(String.valueOf(s.id));
         tv4.setText(String.valueOf(s.id));
@@ -51,6 +63,16 @@ public class EditActivity extends AppCompatActivity {
 
 
 //        ed2.setText(s.startTime);
+
+        edname.setText(s.startTime);
+        ed2.setText(s.name);
+       ed3.setText(s.startLocation);
+        ed4.setText(s.destinationTime);
+        ed5.setText(s.destinationLocation);
+        ed6.setText(s.Weblocation);
+        ed7.setText(s.note);
+
+/*
         ed2.setText(s.name);
         ed3.setText(s.startLocation);
         ed4.setText(s.destinationTime);
@@ -58,6 +80,17 @@ public class EditActivity extends AppCompatActivity {
         ed6.setText(s.Weblocation);
         ed7.setText(s.note);
         edname.setText(s.startTime);
+*/
+/*
+        ed2.setText(s.name);
+        ed3.setText(s.startLocation);
+        ed4.setText(s.destinationTime);
+        ed5.setText(s.destinationLocation);
+        ed6.setText(s.Weblocation);
+        ed7.setText(s.note);
+        edname.setText(s.startTime);
+*/
+
 //        edname.setText(s.name);
 
 
@@ -99,7 +132,7 @@ public class EditActivity extends AppCompatActivity {
     public void clickedit2(View v)
     {
 
-        TravelData s = new TravelData(id,ed2.getText().toString(),edname.getText().toString(), ed3.getText().toString(),
+        TravelData s = new TravelData(id,edname.getText().toString(),ed2.getText().toString(), ed3.getText().toString(),
                 ed4.getText().toString(),ed5.getText().toString(),
                 ed6.getText().toString(),ed7.getText().toString()
 
