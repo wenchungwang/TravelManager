@@ -11,39 +11,36 @@
         android:id="@+id/button16"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:onClick="clicki1"
-        android:text="日本觀光局"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clickhelp1"
+        android:text="台灣駐館位置及聯絡資訊"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="Button"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clickhelp2"
+        android:text="急難救助服務專線"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/WebView3"
+        android:layout_width="360dp"
+        android:layout_height="450dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button16" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
-
 
 
 </android.support.constraint.ConstraintLayout>

@@ -43,6 +43,8 @@ public class Main0Activity extends AppCompatActivity {
     }
 
     public void clickhelp(View v){
+        Intent it = new Intent(Main0Activity.this,JinActivity.class);
+        startActivity(it);
 
     }
 /*
