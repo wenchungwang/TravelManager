@@ -19,6 +19,19 @@ public class Main0Activity extends AppCompatActivity {
         startActivity(it);
 
     }
+
+    public void click22(View v){
+//        Intent it = new Intent(Main0Activity.this, MainActivity.class);
+//        startActivity(it);
+    }
+
+    public void click33(View v){
+       Intent it = new Intent(Main0Activity.this, JapanWeb1Activity.class);
+        startActivity(it);
+    }
+
+
+
 /*
     public void click11(View v) {
 
