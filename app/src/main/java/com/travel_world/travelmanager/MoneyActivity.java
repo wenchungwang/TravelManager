@@ -29,7 +29,7 @@ public class MoneyActivity extends AppCompatActivity {
 //    MyAdapter adapter;
 //    MyHandler dataHandler;
 
-    //TextView tvJ1,tvJ2;
+    TextView tvJ1,tvJ2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
