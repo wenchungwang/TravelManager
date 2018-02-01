@@ -19,6 +19,7 @@ public class JapanWeb1Activity extends AppCompatActivity {
         wv = (WebView) findViewById(R.id.WebView);
       wv.setWebChromeClient(new WebChromeClient());
        wv.getSettings().setJavaScriptEnabled(true);
+        wv.loadUrl("https://www.agoda.com/");
 /*
         if(requestCode==456)
         {

@@ -16,6 +16,7 @@ public class FoodActivity extends AppCompatActivity {
         wv4 = (WebView) findViewById(R.id.WebView4);
         wv4.setWebChromeClient(new WebChromeClient());
         wv4.getSettings().setJavaScriptEnabled(true);
+        wv4.loadUrl("http://www.letsgojp.com/");
     }
 
     public void clicktabelog(View v){

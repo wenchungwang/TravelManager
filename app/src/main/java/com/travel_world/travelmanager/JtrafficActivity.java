@@ -19,6 +19,7 @@ public class JtrafficActivity extends AppCompatActivity {
         wv2 = (WebView) findViewById(R.id.WebView2);
             wv2.setWebChromeClient(new WebChromeClient());
             wv2.getSettings().setJavaScriptEnabled(true);
+        wv2.loadUrl("http://www.welcome2japan.tw/");       //日本觀光局
    //     wv2.loadUrl("http://www.jreast.co.jp/tc/");
     }
 

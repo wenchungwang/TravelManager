@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        dao = new StudentFileDAO(this);   //for old method
-        dbType =DBtype.DB;
+        dbType =DBtype.CLOUD;
 //        dbType = 1; // 1:記憶體 2:檔案
         dao =  TravelDataFactoryDAO.getDAOInstance(this, dbType);
         str = new String[] {"1", "2", "3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"};

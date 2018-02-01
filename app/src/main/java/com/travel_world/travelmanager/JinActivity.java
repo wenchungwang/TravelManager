@@ -19,6 +19,7 @@ public class JinActivity extends AppCompatActivity {
         wv3 = (WebView) findViewById(R.id.WebView3);
         wv3.setWebChromeClient(new WebChromeClient());
         wv3.getSettings().setJavaScriptEnabled(true);
+        wv3.loadUrl("https://www.boca.gov.tw/cp-87-2121-7a5da-1.html");
     }
 
 
