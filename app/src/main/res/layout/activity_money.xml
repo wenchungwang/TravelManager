@@ -7,6 +7,58 @@
     tools:context="com.travel_world.travelmanager.MoneyActivity">
 
     <TextView
+        android:id="@+id/textView44"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="現金賣出"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="即期買入"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
         android:id="@+id/textView28"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -41,6 +93,7 @@
         android:layout_marginBottom="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:onClick="clickTJ"
         android:text="換算"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView28"
@@ -51,31 +104,32 @@
         android:id="@+id/textView11"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toEndOf="@+id/button40"
-        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:text="新台幣"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <Button
         android:id="@+id/button40"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="clickJT"
         android:text="換算"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <TextView
         android:id="@+id/textView25"
@@ -83,19 +137,20 @@
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:text="日圓"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <EditText
         android:id="@+id/editText6"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,12 +197,12 @@
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="即期買入"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="現金買入"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
         android:id="@+id/textView31"
@@ -155,7 +210,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <TextView
@@ -189,7 +244,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="clickGetMoney"
-        android:text="GetJMONEY"
+        android:text="更新匯率"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
