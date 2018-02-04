@@ -31,9 +31,9 @@ public class MoneyActivity extends AppCompatActivity {
 //    MyAdapter adapter;
 //    MyHandler dataHandler;
 
-    TextView tvJ1,tvJ2,tvJ3,tvJ4,tvd1,tvd2;
-    String data2,data3,data4,data5;
-    EditText ed66,ed77;
+    TextView tvJ1, tvJ2, tvJ3, tvJ4, tvd1, tvd2;
+    String data2, data3, data4, data5;
+    EditText ed66, ed77;
 
     double resault;
     DecimalFormat df2;
@@ -53,17 +53,19 @@ public class MoneyActivity extends AppCompatActivity {
         ed77 = (EditText) findViewById(R.id.editText7);
 
     }
+
+
    // String.valueOf
     //thoams 20180201
     public void clickJT(View v){
         DecimalFormat df = new DecimalFormat("0.0000");
         double resault2 = Double.parseDouble(ed66.getText().toString());
-        double a2,b2;   //,b,c ;
+        double a2,b2,c2;   //,b,c ;
 
         b2 = Double.parseDouble(data2);
+        c2 = Double.parseDouble(data3);
 
-
-        a2 = (resault2) /(b2);
+        a2 = (resault2) /((b2+c2)/2);
  //       a = resault * ((b+c)/2.);
      //   int TWmoney = Integer.parseInt(ed66.getText().toString());
 //        Integer TWmoney = Integer.valueOf(ed66.getText().toString());
