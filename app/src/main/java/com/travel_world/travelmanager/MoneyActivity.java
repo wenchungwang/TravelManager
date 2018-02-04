@@ -21,6 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.text.DecimalFormat;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -33,6 +34,9 @@ public class MoneyActivity extends AppCompatActivity {
     TextView tvJ1,tvJ2,tvJ3,tvJ4,tvd1,tvd2;
     String data2,data3,data4,data5;
     EditText ed66,ed77;
+
+    double resault;
+    DecimalFormat df2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +56,54 @@ public class MoneyActivity extends AppCompatActivity {
    // String.valueOf
     //thoams 20180201
     public void clickJT(View v){
-        int TWmoney = Integer.valueOf(ed66.getText().toString());
-        int sum = 0;
-//        sum = TWmoney * 2;
+        DecimalFormat df = new DecimalFormat("0.0000");
+        double resault2 = Double.parseDouble(ed66.getText().toString());
+        double a2,b2;   //,b,c ;
+
+        b2 = Double.parseDouble(data2);
+
+
+        a2 = (resault2) /(b2);
+ //       a = resault * ((b+c)/2.);
+     //   int TWmoney = Integer.parseInt(ed66.getText().toString());
+//        Integer TWmoney = Integer.valueOf(ed66.getText().toString());
+//        Integer sum = 0;
+//        sum =  (TWmoney * 2);
+//      sum =  * 2;
+      // tvd1.setText("考兌換美金 : " + df.format(resault));
+//        tvd1.setText("="+df.format(resault));
+        tvd1.setText("="+df.format(a2));
+  //      tvd1.setText(String.valueOf(sum));
+
 //        tvd1.setText(sum);
 
 
     }
 
-    public void clickTJ(View v){
-        int Jpmoney = Integer.valueOf(ed77.getText().toString());
-        int sum = 0;
-//        sum = Jpmoney * 2;
-//        tvd2.setText(sum);
+    public void clickTJ(View v) {
+
+
+        df2 = new DecimalFormat("0.0000");
+        resault = Double.parseDouble(ed77.getText().toString());
+        double a1, b1, c1;   //,b,c ;
+
+        b1 = Double.parseDouble(data2);
+        c1 = Double.parseDouble(data3);
+        a1 = resault * ((b1 + c1) / 2.);// 0.2611;
+
+        tvd2.setText("=" + df2.format(a1));
+
+/*
+        DecimalFormat df2 = new DecimalFormat("0.00");
+        double resault2 = Double.parseDouble(ed77.getText().toString());
+
+        double a1,b1,c1 ;
+
+        b1 = Double.parseDouble(data2);
+        c1 = Double.parseDouble(data3);
+        a1 = resault2 * ((b1+c1)/2.);
+        tvd2.setText("="+df2.format(a1));
+ */
     }
 
     public void clickGetMoney(View v) {
