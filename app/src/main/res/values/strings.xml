@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TravelManager</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login">TravelManager</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

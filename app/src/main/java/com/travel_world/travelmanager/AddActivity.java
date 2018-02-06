@@ -9,6 +9,7 @@ import com.travel_world.travelmanager.TravelData;       //check thomas wang 2018
 
 public class AddActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,7 @@ public class AddActivity extends AppCompatActivity {
 
     public void clickAdd(View v)
     {
+
 
         EditText ed6 = (EditText) findViewById(R.id.editText16);
         EditText ed7 = (EditText) findViewById(R.id.editText17);
