@@ -2,14 +2,21 @@ package com.travel_world.travelmanager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 import com.travel_world.travelmanager.TravelData;       //check thomas wang 20180117
 
 public class AddActivity extends AppCompatActivity {
-
-
+    int id=0;
+    String startTime= "";
+    String startLocation= "";
+    String destinationTime= "";
+    String destinationLocation= "";
+    String Weblocation= "";
+    String note= "";
+    String name= "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +36,8 @@ public class AddActivity extends AppCompatActivity {
         EditText ed12 = (EditText) findViewById(R.id.editText112);
         EditText ed13 = (EditText) findViewById(R.id.editTextname);
 
-        int id = Integer.valueOf(ed6.getText().toString());     //CHECK this .because it need to add real id again //thomas 20180119
+//        int id = Integer.valueOf(ed6.getText().toString());     //CHECK this .because it need to add real id again //thomas 20180119
+/*
         String startTime= ed7.getText().toString();
         String startLocation= ed8.getText().toString();
         String destinationTime= ed9.getText().toString();
@@ -37,9 +45,50 @@ public class AddActivity extends AppCompatActivity {
         String Weblocation= ed11.getText().toString();
         String note= ed12.getText().toString();
         String name= ed13.getText().toString();
+*/
+        if ("".equals(ed6.getText().toString().trim())) {
+            Log.d("NET", "ADD0");
+        }
+        if ("".equals(ed7.getText().toString().trim()))
+        {
+            Log.d("NET", "ADD1");
+        }
+        else if ("".equals(ed8.getText().toString().trim()))
+        {
+            Log.d("NET", "ADD2");
+        }
+        else if ("".equals(ed9.getText().toString().trim()))
+        {
+            Log.d("NET", "ADD3");
+        }
+        else if ("".equals(ed10.getText().toString().trim()))
+        {
+            Log.d("NET", "ADD4");
+        }
+        else if ("".equals(ed11.getText().toString().trim()))
+        {
+            Log.d("NET", "TJ1");
+        }
+        else if ("".equals(ed12.getText().toString().trim()))
+        {
+            Log.d("NET", "TJ1");
+        }
+        else if ("".equals(ed13.getText().toString().trim()))
+        {
+            Log.d("NET", "TJ1");
+        }
+        else {
+            id = Integer.valueOf(ed6.getText().toString());     //CHECK this .because it need to add real id again //thomas 20180119
+            startTime = ed7.getText().toString();
+            startLocation = ed8.getText().toString();
+            destinationTime = ed9.getText().toString();
+            destinationLocation = ed10.getText().toString();
+            Weblocation = ed11.getText().toString();
+            note = ed12.getText().toString();
+            name = ed13.getText().toString();
 
-        MainActivity.dao.add(new TravelData(id,startTime,name,startLocation,destinationTime, destinationLocation,Weblocation,note));
-
+            MainActivity.dao.add(new TravelData(id, startTime, name, startLocation, destinationTime, destinationLocation, Weblocation, note));
+        }
 /*
         EditText ed1 = (EditText) findViewById(R.id.editText);
         EditText ed2 = (EditText) findViewById(R.id.editText4);
