@@ -96,7 +96,7 @@ public class MoneyActivity extends AppCompatActivity {
 
         ed66 = (EditText) findViewById(R.id.editText6);
 
-        if ("".equals(ed66.getText().toString()))
+        if ("".equals(ed66.getText().toString().trim()))
         {
             Log.d("NET", "JT1");
         }
@@ -133,7 +133,7 @@ public class MoneyActivity extends AppCompatActivity {
 
    //     Log.d("NET", data2);
 
-        if ("".equals(ed77.getText().toString()))
+        if ("".equals(ed77.getText().toString().trim()))
         {
             Log.d("NET", "TJ1");
         }
