@@ -136,26 +136,35 @@ public class LoginActivity extends AppCompatActivity {
         final String password = ((EditText)findViewById(R.id.password))
 
                 .getText().toString();
+        if("".equals(email))
+        {
 
-       Log.d("AUTH", email+"/"+password);
+            Log.d("onComplete", "輸入空字元");
+        }
+        else if("".equals(password))
+        {
+            Log.d("onComplete", "輸入空字元2");
+        }
+        else {
+            Log.d("AUTH", email + "/" + password);
 
-        auth.signInWithEmailAndPassword(email, password)
+            auth.signInWithEmailAndPassword(email, password)
 
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
-                    @Override
+                        @Override
 
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        Log.d("onComplete", "onComplete");
+                            Log.d("onComplete", "onComplete");
 
-                        if (!task.isSuccessful()){
+                            if (!task.isSuccessful()) {
 
-                            Log.d("onComplete", "登入失敗");
+                                Log.d("onComplete", "登入失敗");
 
-                            register(email, password);
+                                register(email, password);
 
-                        }
+                            }
                     /*
                         else  if("".equals(email))
                         {
@@ -167,18 +176,17 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("onComplete", "輸入空字元2");
                         }
                         */
-                        else
-                        {
-                            Log.d("NET", "LOGIN SUSS");
-                            finish();
-                            startActivity(it);
+                            else {
+                                Log.d("NET", "LOGIN SUSS");
+                                finish();
+                                startActivity(it);
+
+                            }
 
                         }
 
-                    }
-
-                });
-
+                    });
+        }
     }
 
 
